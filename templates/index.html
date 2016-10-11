@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {{ title }}
+    </title>
+</head>
+<body>
+    <h1>
+        {{ title }} is working
+    </h1>
+    <p>
+        {% for list in blog_list%}
+            <a href='{{list.get_absolute_url}}'>{{list.title}}</a><br />
+            {{list.content}}<br/>
+        {% endfor %}
+    </p>
+</body>
+</html>
